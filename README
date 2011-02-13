@@ -1,42 +1,36 @@
+Copyright (C) 2007-2011 GigaRender project <https://sites.google.com/site/gigarender/>
 
+  GigaRender is free software; you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation; either version 2 of the License, or
+  (at your option) any later version.
 
-Change Log:
-===========
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
 
-GigaRender v0.3.1:
-==================
-- encapsulated patch load sub-requests into WorkItem structure.
-- organize WorkItems into different work queues each related to a different type of WorkItem(s).
-- automate the following constants:
-	#define PATCHES_COUNT_PER_FILE_ROW 128
-- added Singleton class and applied it to the DXUTState class found in DXUT.cpp.
-- fix bugs faced when doing TEXTURE STREAMING:
- bug seemed to be gone after the defining the approprite video card driver.
-- software engineer current work:
- . A Class Diagram representing the main classes and objects.
- . Two sequence diagrams that shows the exchanged messages in respond to camera movement event.
-- implemented StreamReader using Win32 API for faster read\write io calls.
-- RAM buffering.
-- Compress geometery data by only storing the height values and then conculding the (x, z)
- whenever a patch is requested (runtime decompressiong of geometry data).
-- rename RequestManager >>	JobManager || WorkManager.
+  You should have received a copy of the GNU General Public License
+  along with this program; if not, write to the Free Software
+  Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 
+  In addition, as a special exception, the MaNGOS project
+  gives permission to link the code of its release of MaNGOS with the
+  OpenSSL project's "OpenSSL" library (or with modified versions of it
+  that use the same license as the "OpenSSL" library), and distribute
+  the linked executables.  You must obey the GNU General Public License
+  in all respects for all of the code used other than "OpenSSL".  If you
+  modify this file, you may extend this exception to your version of the
+  file, but you are not obligated to do so.  If you do not wish to do
+  so, delete this exception statement from your version.
 
-GigaRender v0.3:
-================
-- re-organization of project files into libraries and Folders.
-- texture streaming (done with bugs).
+== GigaRender ==
 
-GigaRender v0.2:
-================
-- Testing the project on a terrain data of 1 GB size.
-- The TerrainPager class can is now enabled to perform tasks of mutiple WorkingSetWindow(s).
-- Two separate cameras each has its own set of keys with the ability to switch between
- them and control each.
-- A 3D frustum model to visualize the camera movement and orientation as the controler moves
- along the paged terrain.
- 
-GigaRender v0.1:
-================
-- Establishment version that loads a small set of terrain patches and the rest of the terrain
-patches are paged as needed.
+GigaRender implements graphics content streaming optimized for terrain
+data(geometry + textures) between hard disk and graphics card memory 
+with staging through the system memory to provide seamless display of
+large scenes. The project allows scenes with large graphical content 
+(e.g. Big Cities) to run on lower/normal computer configurations using
+the technique of load-on-demand, where only the visible parts of the 
+scene are loaded into the video memory from the hard-drive. The loading
+process is done transparently in background threads.
