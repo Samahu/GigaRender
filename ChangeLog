@@ -1,0 +1,40 @@
+Change Log:
+===========
+
+GigaRender v0.3.1:
+==================
+- encapsulated patch load sub-requests into WorkItem structure.
+- organize WorkItems into different work queues each related to a different type of WorkItem(s).
+- automate the following constants:
+	#define PATCHES_COUNT_PER_FILE_ROW 128
+- added Singleton class and applied it to the DXUTState class found in DXUT.cpp.
+- fix bugs faced when doing TEXTURE STREAMING:
+ bug seemed to be gone after the defining the approprite video card driver.
+- software engineer current work:
+ . A Class Diagram representing the main classes and objects.
+ . Two sequence diagrams that shows the exchanged messages in respond to camera movement event.
+- implemented StreamReader using Win32 API for faster read\write io calls.
+- RAM buffering.
+- Compress geometery data by only storing the height values and then conculding the (x, z)
+ whenever a patch is requested (runtime decompressiong of geometry data).
+- rename RequestManager >>	JobManager || WorkManager.
+
+
+GigaRender v0.3:
+================
+- re-organization of project files into libraries and Folders.
+- texture streaming (done with bugs).
+
+GigaRender v0.2:
+================
+- Testing the project on a terrain data of 1 GB size.
+- The TerrainPager class can is now enabled to perform tasks of mutiple WorkingSetWindow(s).
+- Two separate cameras each has its own set of keys with the ability to switch between
+ them and control each.
+- A 3D frustum model to visualize the camera movement and orientation as the controler moves
+ along the paged terrain.
+ 
+GigaRender v0.1:
+================
+- Establishment version that loads a small set of terrain patches and the rest of the terrain
+patches are paged as needed.
