@@ -1,0 +1,21 @@
+- Loading priorities algorithm implementation (50%).
+- physics data streaming.
+- Cracks between different LODs.
+- display statistics about loading\unloding memory usage
+- implement different determine-working-set algorithms (33%)
+- adding objects to the scene.
+- re-implement TerraGen using the StreamReader functionality in the Utility Lib.
+- automate the following constants:
+	#define PATCH_TEXTURE_WIDTH 256
+	#define PATCH_TEXTURE_HEIGHT 256
+- moving into DirectX 10.
+- rename TerrainPager	>>	ResourceManager.
+- you might consider adding an resource eviction mechanism that won't immediatly remove the
+ unsed-resource from the memory in the hope that this resource will be demanded again.
+- add functionaliy that allows u to estimate the size of loaded textures (review
+ ContentStreaming sample).
+- consider using the DDS file format without depending on the D3DX functionality.
+- Consider using Memory Mapped File IO.
+- Do a more clever copying from MainMemory to VideoMemory. for Texture Copying you may
+still specify only one copy operation per frame, but for lod fetching you may perfrom
+multiple copy operations upon ready lods (espcially lods with low resolution).

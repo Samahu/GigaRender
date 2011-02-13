@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{0D50CAB9-1280-4BB4-BF67-776238B92073}"
+	ProjectSection(SolutionItems) = preProject
+		GigaRender\readme.txt = GigaRender\readme.txt
+		GigaRender\todo.txt = GigaRender\todo.txt
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GigaRender", "GigaRender\GigaRender.vcproj", "{D3D09108-96D0-4629-88B8-122C0256058C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3} = {C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcproj", "{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TerraGen", "TerraGen\TerraGen.vcproj", "{CC13BDE2-C67B-4F99-9561-1AFE149ED120}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A0680371-0F93-4E0C-81F0-B47276885BA2} = {A0680371-0F93-4E0C-81F0-B47276885BA2}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Noise", "Noise\libnoise.vcproj", "{A0680371-0F93-4E0C-81F0-B47276885BA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Profile|Win32 = Profile|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|Win32.Build.0 = Debug|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Profile|Win32.ActiveCfg = Profile|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Profile|Win32.Build.0 = Profile|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|Win32.ActiveCfg = Release|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|Win32.Build.0 = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|Win32.Build.0 = Debug|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Profile|Win32.ActiveCfg = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Profile|Win32.Build.0 = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|Win32.ActiveCfg = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|Win32.Build.0 = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|Win32.Build.0 = Debug|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Profile|Win32.ActiveCfg = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Profile|Win32.Build.0 = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|Win32.ActiveCfg = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|Win32.Build.0 = Release|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|Win32.Build.0 = Debug|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Profile|Win32.ActiveCfg = Debug|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Profile|Win32.Build.0 = Debug|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|Win32.ActiveCfg = Release|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
