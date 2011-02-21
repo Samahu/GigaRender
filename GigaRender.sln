@@ -3,8 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{0D50CAB9-1280-4BB4-BF67-776238B92073}"
 	ProjectSection(SolutionItems) = preProject
-		GigaRender\readme.txt = GigaRender\readme.txt
-		GigaRender\todo.txt = GigaRender\todo.txt
+		ChangeLog = ChangeLog
+		README = README
+		TODO = TODO
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GigaRender", "GigaRender\GigaRender.vcproj", "{D3D09108-96D0-4629-88B8-122C0256058C}"
@@ -20,6 +21,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TerraGen", "TerraGen\TerraG
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Noise", "Noise\libnoise.vcproj", "{A0680371-0F93-4E0C-81F0-B47276885BA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D45417AE-BE6F-46CF-A6FC-DED30E3DE676}"
+	ProjectSection(SolutionItems) = preProject
+		INSTALL = INSTALL
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

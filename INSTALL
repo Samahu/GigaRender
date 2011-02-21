@@ -1,2 +1,20 @@
-Coming Soon!
-Explains prerequisites to compile the project and the steps to run the program.
+Prerequisites:
+- DirectX 9.0c or later installed.
+
+Steps to run the software:
+- Compile all the projects.
+- Go to GigaRender\Dist folder
+- First run TerraGen_d.exe which builds a default test map of the size 4096x4096
+- The TerraGen program will produce 5 files:
+	- HeightMap.bmp (a gray scale image that represents the height map)
+	- Texture.bmp (a colored image containing texture information)
+	- major (a binary file that describes the map size, vertex spacing, ..) [REQUIRED]
+	- map (a binary file that holds the geomerty data of the terrain preprocessed
+	 and optimized for GigaRender streaming) [REQUIRED]
+	- textures (a binary file that holds a preprocessed and optimized version of 
+	 terrain texture) [REQUIRED]
+- Within GigaRender\Dist folder create a Resources sub-folder.
+- Within GigaRender\Dist\Resources create a map0 sub-folder.
+- Copy the 3 required generated files (major, map, and textures) to the map0 folder
+- Go back to GigaRender\Dist folder
+- Run GigaRender_d.exe
