@@ -81,6 +81,7 @@ bool TerrainPager::Init()
 	assert(NULL != pDevice && "Direct 3D Device not set");
 	geometryStream = StreamReader::Create("map");
 	assert(NULL != geometryStream);	// No data to read just quit.
+
 	if (utilizeTextures)
 	{
 		texturesStream = StreamReader::Create("textures");

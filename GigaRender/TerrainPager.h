@@ -91,12 +91,12 @@ private:
 	TerrainPager();
 
 public:
+	// @param filename: name of the major file.
 	static TerrainPager * Create(char const filename[], unsigned int nbAllocatedPatches);
+
 	// Destructor
 	~TerrainPager();
 
-
-	// @param filename: name of the major file.
 	bool Init();
 	void Destroy();
 
