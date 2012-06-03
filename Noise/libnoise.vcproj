@@ -166,7 +166,6 @@
 			<Tool
 				Name="VCLinkerTool"
 				OutputFile="..\Dist\Noise_d.dll"
-				LinkIncremental="2"
 				SuppressStartupBanner="true"
 				ModuleDefinitionFile=".\src\win32\Noise_d.def"
 				GenerateDebugInformation="true"

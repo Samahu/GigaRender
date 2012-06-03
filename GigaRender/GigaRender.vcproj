@@ -53,9 +53,8 @@
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="dxstdafx.h"
 				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="4"
-				ShowIncludes="true"
+				ShowIncludes="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -71,7 +70,6 @@
 				AdditionalOptions="/IGNORE:4089"
 				AdditionalDependencies="dxerr.lib dxguid.lib d3dx9d.lib d3d9.lib winmm.lib comctl32.lib"
 				OutputFile="..\Dist\$(ProjectName)_d.exe"
-				LinkIncremental="2"
 				GenerateManifest="false"
 				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="true"
@@ -141,8 +139,8 @@
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="dxstdafx.h"
 				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				ShowIncludes="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -228,8 +226,8 @@
 				UsePrecompiledHeader="2"
 				PrecompiledHeaderThrough="dxstdafx.h"
 				WarningLevel="4"
-				Detect64BitPortabilityProblems="true"
 				DebugInformationFormat="3"
+				ShowIncludes="false"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
