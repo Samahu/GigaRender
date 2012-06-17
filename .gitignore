@@ -1,3 +1,6 @@
 *.ncb
 *.ilk
 *.obj
+*.pdsync
+*.user
+*.suo
