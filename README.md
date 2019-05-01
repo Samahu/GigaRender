@@ -18,8 +18,8 @@ The loading process is done transparently in background threads.
 
 
 # building the project
-To build the project first you need to have DirectX 9.0c or later installed.
-Then open GigaRender.sln with Visual Studio and run build.
+To build the project first you need to have DirectX 9.0c or later installed.  
+Open GigaRender.sln with Visual Studio and run build all command.
 
 # Running the project
 Once the project has been built, follow these steps to launch the project:
