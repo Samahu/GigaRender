@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "WorkQueue.h"
 #include "Job.h"
 #include "CriticalSection.h"

@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "WorkPool.h"
 #include "WorkQueue.h"
 

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{5fc20a26-f000-4537-8ca4-813502eb0123}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="Cameras">
+      <UniqueIdentifier>{10b6d0c2-87f4-48ea-b959-417274a4d99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WorkingSetDecisionAlgorithms">
+      <UniqueIdentifier>{d983ec0a-ada4-42b8-8b0a-988828fb26a0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="GigaRender.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseCamera.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraEventListener.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="FirstPersonCamera.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleFrustumRectangle.h">
+      <Filter>WorkingSetDecisionAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="FrustumRectangle.h">
+      <Filter>WorkingSetDecisionAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="SuperFrustum.h">
+      <Filter>WorkingSetDecisionAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="FetchLOD.h" />
+    <ClInclude Include="FetchPatchItem.h" />
+    <ClInclude Include="FetchTexture.h" />
+    <ClInclude Include="Frustum3D.h" />
+    <ClInclude Include="IBoss.h" />
+    <ClInclude Include="Job.h" />
+    <ClInclude Include="JobManager.h" />
+    <ClInclude Include="Patch.h" />
+    <ClInclude Include="PatchFacesIndexer.h" />
+    <ClInclude Include="PatchID.h" />
+    <ClInclude Include="PatchItemDecompressor.h" />
+    <ClInclude Include="PatchItemLoader.h" />
+    <ClInclude Include="PatchResolution.h" />
+    <ClInclude Include="PatchVerticesMapping.h" />
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="TerrainPager.h" />
+    <ClInclude Include="Worker.h" />
+    <ClInclude Include="WorkingSetWindow.h" />
+    <ClInclude Include="WorkPool.h" />
+    <ClInclude Include="WorkQueue.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseCamera.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="FirstPersonCamera.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="DoubleFrustumRectangle.cpp">
+      <Filter>WorkingSetDecisionAlgorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="FetchLOD.cpp" />
+    <ClCompile Include="FetchPatchItem.cpp" />
+    <ClCompile Include="FetchTexture.cpp" />
+    <ClCompile Include="Frustum3D.cpp" />
+    <ClCompile Include="Job.cpp" />
+    <ClCompile Include="JobManager.cpp" />
+    <ClCompile Include="Patch.cpp" />
+    <ClCompile Include="PatchFacesIndexer.cpp" />
+    <ClCompile Include="PatchItemDecompressor.cpp" />
+    <ClCompile Include="PatchItemLoader.cpp" />
+    <ClCompile Include="PatchVerticesMapping.cpp" />
+    <ClCompile Include="TerrainPager.cpp" />
+    <ClCompile Include="TerrainPaging.cpp" />
+    <ClCompile Include="Worker.cpp" />
+    <ClCompile Include="WorkingSetWindow.cpp" />
+    <ClCompile Include="WorkPool.cpp" />
+    <ClCompile Include="WorkQueue.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="GigaRender.manifest">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\program.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

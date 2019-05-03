@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "WorkingSetWindow.h"
 #include "TerrainPager.h"
 #include "BaseCamera.h"

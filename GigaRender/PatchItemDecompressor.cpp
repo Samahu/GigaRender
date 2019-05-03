@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "PatchItemDecompressor.h"
 #include "FetchPatchItem.h"
 

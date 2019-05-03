@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "Frustum3D.h"
 #include "BaseCamera.h"
 

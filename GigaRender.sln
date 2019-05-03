@@ -1,65 +1,166 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_SolutionItems", "_SolutionItems", "{0D50CAB9-1280-4BB4-BF67-776238B92073}"
 	ProjectSection(SolutionItems) = preProject
 		ChangeLog = ChangeLog
-		README = README
+		LICENSE = LICENSE
+		README.md = README.md
 		TODO = TODO
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GigaRender", "GigaRender\GigaRender.vcproj", "{D3D09108-96D0-4629-88B8-122C0256058C}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GigaRender", "GigaRender\GigaRender.vcxproj", "{D3D09108-96D0-4629-88B8-122C0256058C}"
 	ProjectSection(ProjectDependencies) = postProject
-		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3} = {C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D} = {9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD} = {E0CF097B-F22D-465B-A884-D89E55BD7ECD}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcproj", "{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Utility", "Utility\Utility.vcxproj", "{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TerraGen", "TerraGen\TerraGen.vcproj", "{CC13BDE2-C67B-4F99-9561-1AFE149ED120}"
-	ProjectSection(ProjectDependencies) = postProject
-		{A0680371-0F93-4E0C-81F0-B47276885BA2} = {A0680371-0F93-4E0C-81F0-B47276885BA2}
-	EndProjectSection
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TerraGen", "TerraGen\TerraGen.vcxproj", "{CC13BDE2-C67B-4F99-9561-1AFE149ED120}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Noise", "Noise\libnoise.vcproj", "{A0680371-0F93-4E0C-81F0-B47276885BA2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Noise", "Noise\libnoise.vcxproj", "{A0680371-0F93-4E0C-81F0-B47276885BA2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D45417AE-BE6F-46CF-A6FC-DED30E3DE676}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D3DX", "D3DX", "{573AC7E1-E25A-42B2-8BC9-62BAFAD6B6F7}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Include", "Include", "{7058BFCE-051D-4D23-BAF3-45BB7CC83550}"
 	ProjectSection(SolutionItems) = preProject
-		INSTALL = INSTALL
+		D3DX\Include\D3DX10.h = D3DX\Include\D3DX10.h
+		D3DX\Include\d3dx10async.h = D3DX\Include\d3dx10async.h
+		D3DX\Include\D3DX10core.h = D3DX\Include\D3DX10core.h
+		D3DX\Include\D3DX10math.h = D3DX\Include\D3DX10math.h
+		D3DX\Include\D3DX10math.inl = D3DX\Include\D3DX10math.inl
+		D3DX\Include\D3DX10mesh.h = D3DX\Include\D3DX10mesh.h
+		D3DX\Include\D3DX10tex.h = D3DX\Include\D3DX10tex.h
+		D3DX\Include\d3dx9.h = D3DX\Include\d3dx9.h
+		D3DX\Include\d3dx9anim.h = D3DX\Include\d3dx9anim.h
+		D3DX\Include\d3dx9core.h = D3DX\Include\d3dx9core.h
+		D3DX\Include\d3dx9effect.h = D3DX\Include\d3dx9effect.h
+		D3DX\Include\d3dx9math.h = D3DX\Include\d3dx9math.h
+		D3DX\Include\d3dx9math.inl = D3DX\Include\d3dx9math.inl
+		D3DX\Include\d3dx9mesh.h = D3DX\Include\d3dx9mesh.h
+		D3DX\Include\d3dx9shader.h = D3DX\Include\d3dx9shader.h
+		D3DX\Include\d3dx9shape.h = D3DX\Include\d3dx9shape.h
+		D3DX\Include\d3dx9tex.h = D3DX\Include\d3dx9tex.h
+		D3DX\Include\d3dx9xof.h = D3DX\Include\d3dx9xof.h
+		D3DX\Include\DxErr.h = D3DX\Include\DxErr.h
+		D3DX\Include\dxsdkver.h = D3DX\Include\dxsdkver.h
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{4335FF7B-816A-4CA7-A31F-43240004983C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Runtime", "Runtime", "{F1300BC0-DC38-4DBF-93D4-2CA0E0BE29E1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{24758C73-0EE9-4C9D-A1A7-3128C4DF01A4}"
+	ProjectSection(SolutionItems) = preProject
+		D3DX\Lib\x86\d3dx10.lib = D3DX\Lib\x86\d3dx10.lib
+		D3DX\Lib\x86\d3dx10d.lib = D3DX\Lib\x86\d3dx10d.lib
+		D3DX\Lib\x86\d3dx9.lib = D3DX\Lib\x86\d3dx9.lib
+		D3DX\Lib\x86\d3dx9d.lib = D3DX\Lib\x86\d3dx9d.lib
+		D3DX\Lib\x86\DxErr.lib = D3DX\Lib\x86\DxErr.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{3998A1D3-48AB-4453-A415-132756999403}"
+	ProjectSection(SolutionItems) = preProject
+		D3DX\Lib\x64\d3dx10.lib = D3DX\Lib\x64\d3dx10.lib
+		D3DX\Lib\x64\d3dx10d.lib = D3DX\Lib\x64\d3dx10d.lib
+		D3DX\Lib\x64\d3dx9.lib = D3DX\Lib\x64\d3dx9.lib
+		D3DX\Lib\x64\d3dx9d.lib = D3DX\Lib\x64\d3dx9d.lib
+		D3DX\Lib\x64\DxErr.lib = D3DX\Lib\x64\DxErr.lib
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x64", "x64", "{5CA549F8-E371-4575-8320-B0FCDB6CB971}"
+	ProjectSection(SolutionItems) = preProject
+		D3DX\Runtime\x64\D3DX10d_43.dll = D3DX\Runtime\x64\D3DX10d_43.dll
+		D3DX\Runtime\x64\D3DX9d_43.dll = D3DX\Runtime\x64\D3DX9d_43.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "x86", "x86", "{3BE23559-E206-449E-B404-6E27C6329E5F}"
+	ProjectSection(SolutionItems) = preProject
+		D3DX\Runtime\x86\D3DX10d_43.dll = D3DX\Runtime\x86\D3DX10d_43.dll
+		D3DX\Runtime\x86\D3dx9d_43.dll = D3DX\Runtime\x86\D3dx9d_43.dll
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXUTCore", "DXUTCore\DXUTCore.vcxproj", "{E0CF097B-F22D-465B-A884-D89E55BD7ECD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DXUTOptional", "DXUTOptional\DXUTOptional.vcxproj", "{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD} = {E0CF097B-F22D-465B-A884-D89E55BD7ECD}
 	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
-		Profile|Win32 = Profile|Win32
+		Debug|x64 = Debug|x64
 		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|Win32.ActiveCfg = Debug|Win32
 		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|Win32.Build.0 = Debug|Win32
-		{D3D09108-96D0-4629-88B8-122C0256058C}.Profile|Win32.ActiveCfg = Profile|Win32
-		{D3D09108-96D0-4629-88B8-122C0256058C}.Profile|Win32.Build.0 = Profile|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|x64.ActiveCfg = Debug|x64
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Debug|x64.Build.0 = Debug|x64
 		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|Win32.ActiveCfg = Release|Win32
 		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|Win32.Build.0 = Release|Win32
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|x64.ActiveCfg = Release|x64
+		{D3D09108-96D0-4629-88B8-122C0256058C}.Release|x64.Build.0 = Release|x64
 		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|Win32.ActiveCfg = Debug|Win32
 		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|Win32.Build.0 = Debug|Win32
-		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Profile|Win32.ActiveCfg = Release|Win32
-		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Profile|Win32.Build.0 = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|x64.ActiveCfg = Debug|x64
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Debug|x64.Build.0 = Debug|x64
 		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|Win32.ActiveCfg = Release|Win32
 		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|Win32.Build.0 = Release|Win32
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|x64.ActiveCfg = Release|x64
+		{C4D85644-24A7-4D6E-9F8C-F564E27F8DC3}.Release|x64.Build.0 = Release|x64
 		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|Win32.ActiveCfg = Debug|Win32
 		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|Win32.Build.0 = Debug|Win32
-		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Profile|Win32.ActiveCfg = Release|Win32
-		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Profile|Win32.Build.0 = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|x64.ActiveCfg = Debug|x64
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Debug|x64.Build.0 = Debug|x64
 		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|Win32.ActiveCfg = Release|Win32
 		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|Win32.Build.0 = Release|Win32
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|x64.ActiveCfg = Release|x64
+		{CC13BDE2-C67B-4F99-9561-1AFE149ED120}.Release|x64.Build.0 = Release|x64
 		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|Win32.ActiveCfg = Debug|Win32
 		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|Win32.Build.0 = Debug|Win32
-		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Profile|Win32.ActiveCfg = Debug|Win32
-		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Profile|Win32.Build.0 = Debug|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|x64.ActiveCfg = Debug|x64
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Debug|x64.Build.0 = Debug|x64
 		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|Win32.ActiveCfg = Release|Win32
 		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|Win32.Build.0 = Release|Win32
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|x64.ActiveCfg = Release|x64
+		{A0680371-0F93-4E0C-81F0-B47276885BA2}.Release|x64.Build.0 = Release|x64
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Debug|Win32.Build.0 = Debug|Win32
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Debug|x64.ActiveCfg = Debug|x64
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Debug|x64.Build.0 = Debug|x64
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Release|Win32.ActiveCfg = Release|Win32
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Release|Win32.Build.0 = Release|Win32
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Release|x64.ActiveCfg = Release|x64
+		{E0CF097B-F22D-465B-A884-D89E55BD7ECD}.Release|x64.Build.0 = Release|x64
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Debug|Win32.Build.0 = Debug|Win32
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Debug|x64.ActiveCfg = Debug|x64
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Debug|x64.Build.0 = Debug|x64
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Release|Win32.ActiveCfg = Release|Win32
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Release|Win32.Build.0 = Release|Win32
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Release|x64.ActiveCfg = Release|x64
+		{9F64786D-4F8F-43BF-ADA0-133ABAE1E52D}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{573AC7E1-E25A-42B2-8BC9-62BAFAD6B6F7} = {0D50CAB9-1280-4BB4-BF67-776238B92073}
+		{7058BFCE-051D-4D23-BAF3-45BB7CC83550} = {573AC7E1-E25A-42B2-8BC9-62BAFAD6B6F7}
+		{4335FF7B-816A-4CA7-A31F-43240004983C} = {573AC7E1-E25A-42B2-8BC9-62BAFAD6B6F7}
+		{F1300BC0-DC38-4DBF-93D4-2CA0E0BE29E1} = {573AC7E1-E25A-42B2-8BC9-62BAFAD6B6F7}
+		{24758C73-0EE9-4C9D-A1A7-3128C4DF01A4} = {4335FF7B-816A-4CA7-A31F-43240004983C}
+		{3998A1D3-48AB-4453-A415-132756999403} = {4335FF7B-816A-4CA7-A31F-43240004983C}
+		{5CA549F8-E371-4575-8320-B0FCDB6CB971} = {F1300BC0-DC38-4DBF-93D4-2CA0E0BE29E1}
+		{3BE23559-E206-449E-B404-6E27C6329E5F} = {F1300BC0-DC38-4DBF-93D4-2CA0E0BE29E1}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {551309B1-E3DA-4772-B90C-A79BD748A483}
 	EndGlobalSection
 EndGlobal

@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "patch.h"
 #include "TerrainPager.h"
 #include "PatchResolution.h"

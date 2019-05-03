@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "Worker.h"
 #include "Thread.h"
 #include "Semaphore.h"

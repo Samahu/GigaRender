@@ -4,3 +4,6 @@
 *.pdsync
 *.user
 *.suo
+/.vs
+/tmp
+/bin

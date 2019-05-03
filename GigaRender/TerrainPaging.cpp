@@ -5,7 +5,7 @@
 //
 // Copyright (c) Microsoft Corporation. All rights reserved.
 //--------------------------------------------------------------------------------------
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "resource.h"
 #include "TerrainPager.h"
 #include "PatchResolution.h"
@@ -53,7 +53,7 @@ bool CALLBACK IsDeviceAcceptable( D3DCAPS9* pCaps, D3DFORMAT AdapterFormat,
                                   D3DFORMAT BackBufferFormat, bool bWindowed, void* pUserContext )
 {
     // Typically want to skip backbuffer formats that don't support alpha blending
-    IDirect3D9* pD3D = DXUTGetD3DObject(); 
+    IDirect3D9* pD3D = DXUTGetD3D9Object();
     if( FAILED( pD3D->CheckDeviceFormat( pCaps->AdapterOrdinal, pCaps->DeviceType,
                     AdapterFormat, D3DUSAGE_QUERY_POSTPIXELSHADER_BLENDING, 
                     D3DRTYPE_TEXTURE, BackBufferFormat ) ) )
@@ -70,7 +70,7 @@ bool CALLBACK IsDeviceAcceptable( D3DCAPS9* pCaps, D3DFORMAT AdapterFormat,
 //--------------------------------------------------------------------------------------
 // Before a device is created, modify the device settings as needed
 //--------------------------------------------------------------------------------------
-bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, const D3DCAPS9* pCaps, void* pUserContext )
+bool CALLBACK ModifyDeviceSettings( DXUTDeviceSettings* pDeviceSettings, void* pUserContext )
 {
     return true;
 }
@@ -148,7 +148,7 @@ HRESULT CALLBACK OnResetDevice( IDirect3DDevice9* pd3dDevice,
 //--------------------------------------------------------------------------------------
 // Handle updates to the scene
 //--------------------------------------------------------------------------------------
-void CALLBACK OnFrameMove( IDirect3DDevice9* pd3dDevice, double fTime, float fElapsedTime, void* pUserContext )
+void CALLBACK OnFrameMove( double fTime, float fElapsedTime, void* pUserContext )
 {
 	g_Camera1.FrameMove(fElapsedTime);
 	g_Camera2.FrameMove(fElapsedTime);
@@ -273,18 +273,23 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
     _CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 #endif
 
-	CreateDXUTState();
+	DXUTCreateState();
 //	onexit(DeleteDXUTState);
 
+	DXUTSetCallbackMsgProc(MsgProc);
+	// DXUTSetCallbackKeyboard(OnKeyboard);
+	DXUTSetCallbackFrameMove(OnFrameMove);
+	DXUTSetCallbackDeviceChanging(ModifyDeviceSettings);
+	// DXUTSetCallbackShutdown(ExitApp);
+
     // Set the callback functions
-    DXUTSetCallbackDeviceCreated( OnCreateDevice );
-    DXUTSetCallbackDeviceReset( OnResetDevice );
-    DXUTSetCallbackDeviceLost( OnLostDevice );
-    DXUTSetCallbackDeviceDestroyed( OnDestroyDevice );
-    DXUTSetCallbackMsgProc( MsgProc );
-    DXUTSetCallbackFrameRender( OnFrameRender );
-    DXUTSetCallbackFrameMove( OnFrameMove );
-   
+	DXUTSetCallbackD3D9DeviceAcceptable(IsDeviceAcceptable);
+    DXUTSetCallbackD3D9DeviceCreated( OnCreateDevice );
+    DXUTSetCallbackD3D9DeviceReset( OnResetDevice );
+    DXUTSetCallbackD3D9DeviceLost( OnLostDevice );
+    DXUTSetCallbackD3D9DeviceDestroyed( OnDestroyDevice );
+    DXUTSetCallbackD3D9FrameRender( OnFrameRender );
+    
     // TODO: Perform any application-level initialization here
 	WCHAR buffer[MAX_PATH];
 	GetCurrentDirectory(MAX_PATH, buffer);
@@ -295,16 +300,16 @@ INT WINAPI WinMain( HINSTANCE, HINSTANCE, LPSTR, int )
 	g_pDFRWindow = new DoubleFrustumRectangle(*g_pTerrain);
 
     // Initialize DXUT and create the desired Win32 window and Direct3D device for the application
-    DXUTInit( true, true, true ); // Parse the command line, handle the default hotkeys, and show msgboxes
+    DXUTInit( true, true, nullptr ); // Parse the command line, handle the default hotkeys, and show msgboxes
     DXUTSetCursorSettings( true, true ); // Show the cursor and clip it when in full screen
     DXUTCreateWindow( L"TerrainPaging" );
-    DXUTCreateDevice( D3DADAPTER_DEFAULT, true, 640, 480, IsDeviceAcceptable, ModifyDeviceSettings );
+    DXUTCreateDevice( true, 640, 480 );
 
     // Start the render loop
     DXUTMainLoop();
 
 	int exit_code = DXUTGetExitCode();
-	DeleteDXUTState();
+	DXUTDestroyState();
 
     // TODO: Perform any application-level cleanup here
 	if(NULL != g_pDFRWindow)

@@ -1,4 +1,4 @@
-#include "dxstdafx.h"
+#include "stdafx.h"
 #include "TerrainPager.h"
 #include "Patch.h"
 #include "PatchResolution.h"
@@ -184,7 +184,7 @@ bool TerrainPager::createPatches(int nbVerticesPerPatch)
 	assert(NULL != pDevice);
 
 	IDirect3DTexture9 *texture = NULL;
-	const D3DSURFACE_DESC * pBBDesc = DXUTGetBackBufferSurfaceDesc();
+	const D3DSURFACE_DESC * pBBDesc = DXUTGetD3D9BackBufferSurfaceDesc();
 
 	// create patches and assign them to their files
 	pPatches = new Patch*[nbAllocatedPatches];
